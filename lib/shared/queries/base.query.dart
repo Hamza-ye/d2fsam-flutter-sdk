@@ -1,3 +1,6 @@
+/// BaseQuery is a class that provides a way to query the database and the DHIS2 server.
+/// It is used to perform CRUD operations on entities.
+///
 import 'package:d2_remote/core/annotations/index.dart';
 import 'package:d2_remote/core/utilities/repository.dart';
 import 'package:d2_remote/shared/entities/base.entity.dart';
@@ -87,12 +90,12 @@ class BaseQuery<T extends BaseEntity> {
 
     return this;
   }
-  
+
   // NMC
   whereNotIn(
       {required String attribute,
-        required List<String> values,
-        required bool merge}) {
+      required List<String> values,
+      required bool merge}) {
     if (merge) {
       this.filters?.add(QueryFilter(
           attribute: attribute, condition: QueryCondition.Nin, value: values));
@@ -105,7 +108,7 @@ class BaseQuery<T extends BaseEntity> {
 
     return this;
   }
-  
+
   whereNeq({required String attribute, @required dynamic value}) {
     this.filters?.add(QueryFilter(
         attribute: attribute, condition: QueryCondition.Neq, value: value));
