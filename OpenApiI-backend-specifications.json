@@ -1,0 +1,4229 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "Data Run Api API",
+		"description": "Data Run Api API documentation",
+		"termsOfService": "",
+		"contact": {
+			"name": "",
+			"url": "",
+			"email": ""
+		},
+		"license": {
+			"name": "unlicensed",
+			"url": ""
+		},
+		"version": "0.0.1"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:8080",
+			"description": "Generated server url"
+		}
+	],
+	"paths": {
+		"/api/warehouses/{id}": {
+			"get": {
+				"tags": [
+					"warehouse-resource"
+				],
+				"operationId": "getWarehouse",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Warehouse"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"warehouse-resource"
+				],
+				"operationId": "updateWarehouse",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Warehouse"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Warehouse"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"warehouse-resource"
+				],
+				"operationId": "deleteWarehouse",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"warehouse-resource"
+				],
+				"operationId": "partialUpdateWarehouse",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Warehouse"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/Warehouse"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Warehouse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/warehouse-transactions/{id}": {
+			"get": {
+				"tags": [
+					"warehouse-transaction-resource"
+				],
+				"operationId": "getWarehouseTransaction",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseTransaction"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"warehouse-transaction-resource"
+				],
+				"operationId": "updateWarehouseTransaction",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseTransaction"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseTransaction"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"warehouse-transaction-resource"
+				],
+				"operationId": "deleteWarehouseTransaction",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"warehouse-transaction-resource"
+				],
+				"operationId": "partialUpdateWarehouseTransaction",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseTransaction"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseTransaction"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseTransaction"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/warehouse-items/{id}": {
+			"get": {
+				"tags": [
+					"warehouse-item-resource"
+				],
+				"operationId": "getWarehouseItem",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseItem"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"warehouse-item-resource"
+				],
+				"operationId": "updateWarehouseItem",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseItem"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseItem"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"warehouse-item-resource"
+				],
+				"operationId": "deleteWarehouseItem",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"warehouse-item-resource"
+				],
+				"operationId": "partialUpdateWarehouseItem",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseItem"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseItem"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseItem"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/teams/{id}": {
+			"get": {
+				"tags": [
+					"team-resource"
+				],
+				"operationId": "getTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Team"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"team-resource"
+				],
+				"operationId": "updateTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Team"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Team"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"team-resource"
+				],
+				"operationId": "deleteTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"team-resource"
+				],
+				"operationId": "partialUpdateTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Team"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/Team"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Team"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/team-assignments/{id}": {
+			"get": {
+				"tags": [
+					"team-assignment-resource"
+				],
+				"operationId": "getTeamAssignment",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/TeamAssignment"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"team-assignment-resource"
+				],
+				"operationId": "updateTeamAssignment",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TeamAssignment"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/TeamAssignment"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"team-assignment-resource"
+				],
+				"operationId": "deleteTeamAssignment",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"team-assignment-resource"
+				],
+				"operationId": "partialUpdateTeamAssignment",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TeamAssignment"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/TeamAssignment"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/TeamAssignment"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/review-teams/{id}": {
+			"get": {
+				"tags": [
+					"review-team-resource"
+				],
+				"operationId": "getReviewTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ReviewTeam"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"review-team-resource"
+				],
+				"operationId": "updateReviewTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReviewTeam"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ReviewTeam"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"review-team-resource"
+				],
+				"operationId": "deleteReviewTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"review-team-resource"
+				],
+				"operationId": "partialUpdateReviewTeam",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReviewTeam"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReviewTeam"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ReviewTeam"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/progress-statuses/{id}": {
+			"get": {
+				"tags": [
+					"progress-status-resource"
+				],
+				"operationId": "getProgressStatus",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ProgressStatus"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"progress-status-resource"
+				],
+				"operationId": "updateProgressStatus",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ProgressStatus"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ProgressStatus"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"progress-status-resource"
+				],
+				"operationId": "deleteProgressStatus",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"progress-status-resource"
+				],
+				"operationId": "partialUpdateProgressStatus",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ProgressStatus"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/ProgressStatus"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ProgressStatus"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/m-villages-locations/{id}": {
+			"get": {
+				"tags": [
+					"m-villages-locations-resource"
+				],
+				"operationId": "getMVillagesLocations",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/MVillagesLocations"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"m-villages-locations-resource"
+				],
+				"operationId": "updateMVillagesLocations",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/MVillagesLocations"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/MVillagesLocations"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"m-villages-locations-resource"
+				],
+				"operationId": "deleteMVillagesLocations",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"m-villages-locations-resource"
+				],
+				"operationId": "partialUpdateMVillagesLocations",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/MVillagesLocations"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/MVillagesLocations"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/MVillagesLocations"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/itns-villages/{id}": {
+			"get": {
+				"tags": [
+					"itns-village-resource"
+				],
+				"operationId": "getItnsVillage",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillage"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"itns-village-resource"
+				],
+				"operationId": "updateItnsVillage",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillage"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillage"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"itns-village-resource"
+				],
+				"operationId": "deleteItnsVillage",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"itns-village-resource"
+				],
+				"operationId": "partialUpdateItnsVillage",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillage"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillage"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillage"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/itns-village-houses-details/{id}": {
+			"get": {
+				"tags": [
+					"itns-village-houses-detail-resource"
+				],
+				"operationId": "getItnsVillageHousesDetail",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"itns-village-houses-detail-resource"
+				],
+				"operationId": "updateItnsVillageHousesDetail",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"itns-village-houses-detail-resource"
+				],
+				"operationId": "deleteItnsVillageHousesDetail",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"itns-village-houses-detail-resource"
+				],
+				"operationId": "partialUpdateItnsVillageHousesDetail",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/campaigns/{id}": {
+			"get": {
+				"tags": [
+					"campaign-resource"
+				],
+				"operationId": "getCampaign",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Campaign"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"campaign-resource"
+				],
+				"operationId": "updateCampaign",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Campaign"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Campaign"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"campaign-resource"
+				],
+				"operationId": "deleteCampaign",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"campaign-resource"
+				],
+				"operationId": "partialUpdateCampaign",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Campaign"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/Campaign"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Campaign"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/campaign-types/{id}": {
+			"get": {
+				"tags": [
+					"campaign-type-resource"
+				],
+				"operationId": "getCampaignType",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/CampaignType"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"campaign-type-resource"
+				],
+				"operationId": "updateCampaignType",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CampaignType"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/CampaignType"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"campaign-type-resource"
+				],
+				"operationId": "deleteCampaignType",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			},
+			"patch": {
+				"tags": [
+					"campaign-type-resource"
+				],
+				"operationId": "partialUpdateCampaignType",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int64"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CampaignType"
+							}
+						},
+						"application/merge-patch+json": {
+							"schema": {
+								"$ref": "#/components/schemas/CampaignType"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/CampaignType"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/admin/users/{login}": {
+			"get": {
+				"tags": [
+					"user-resource"
+				],
+				"operationId": "getUser",
+				"parameters": [
+					{
+						"name": "login",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"pattern": "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/AdminUserDTO"
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"user-resource"
+				],
+				"operationId": "updateUser",
+				"parameters": [
+					{
+						"name": "login",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"pattern": "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AdminUserDTO"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/AdminUserDTO"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"user-resource"
+				],
+				"operationId": "deleteUser",
+				"parameters": [
+					{
+						"name": "login",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"pattern": "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/api/admin/users": {
+			"get": {
+				"tags": [
+					"user-resource"
+				],
+				"operationId": "getAllUsers",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/AdminUserDTO"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"user-resource"
+				],
+				"operationId": "updateUser_1",
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AdminUserDTO"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/AdminUserDTO"
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"user-resource"
+				],
+				"operationId": "createUser",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AdminUserDTO"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/User"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/warehouses": {
+			"get": {
+				"tags": [
+					"warehouse-resource"
+				],
+				"operationId": "getAllWarehouses",
+				"parameters": [
+					{
+						"name": "eagerload",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Warehouse"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"warehouse-resource"
+				],
+				"operationId": "createWarehouse",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Warehouse"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Warehouse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/warehouse-transactions": {
+			"get": {
+				"tags": [
+					"warehouse-transaction-resource"
+				],
+				"operationId": "getAllWarehouseTransactions",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					{
+						"name": "eagerload",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WarehouseTransaction"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"warehouse-transaction-resource"
+				],
+				"operationId": "createWarehouseTransaction",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseTransaction"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseTransaction"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/warehouse-items": {
+			"get": {
+				"tags": [
+					"warehouse-item-resource"
+				],
+				"operationId": "getAllWarehouseItems",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/WarehouseItem"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"warehouse-item-resource"
+				],
+				"operationId": "createWarehouseItem",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/WarehouseItem"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/WarehouseItem"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/teams": {
+			"get": {
+				"tags": [
+					"team-resource"
+				],
+				"operationId": "getAllTeams",
+				"parameters": [
+					{
+						"name": "eagerload",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Team"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"team-resource"
+				],
+				"operationId": "createTeam",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Team"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Team"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/team-assignments": {
+			"get": {
+				"tags": [
+					"team-assignment-resource"
+				],
+				"operationId": "getAllTeamAssignments",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					{
+						"name": "eagerload",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/TeamAssignment"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"team-assignment-resource"
+				],
+				"operationId": "createTeamAssignment",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TeamAssignment"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/TeamAssignment"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/review-teams": {
+			"get": {
+				"tags": [
+					"review-team-resource"
+				],
+				"operationId": "getAllReviewTeams",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/ReviewTeam"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"review-team-resource"
+				],
+				"operationId": "createReviewTeam",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ReviewTeam"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ReviewTeam"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/register": {
+			"post": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "registerAccount",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ManagedUserVM"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"201": {
+						"description": "Created"
+					}
+				}
+			}
+		},
+		"/api/progress-statuses": {
+			"get": {
+				"tags": [
+					"progress-status-resource"
+				],
+				"operationId": "getAllProgressStatuses",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/ProgressStatus"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"progress-status-resource"
+				],
+				"operationId": "createProgressStatus",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ProgressStatus"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ProgressStatus"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/m-villages-locations": {
+			"get": {
+				"tags": [
+					"m-villages-locations-resource"
+				],
+				"operationId": "getAllMVillagesLocations",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/MVillagesLocations"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"m-villages-locations-resource"
+				],
+				"operationId": "createMVillagesLocations",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/MVillagesLocations"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/MVillagesLocations"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/itns-villages": {
+			"get": {
+				"tags": [
+					"itns-village-resource"
+				],
+				"operationId": "getAllItnsVillages",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					{
+						"name": "eagerload",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/ItnsVillage"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"itns-village-resource"
+				],
+				"operationId": "createItnsVillage",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillage"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillage"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/itns-village-houses-details": {
+			"get": {
+				"tags": [
+					"itns-village-houses-detail-resource"
+				],
+				"operationId": "getAllItnsVillageHousesDetails",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"itns-village-houses-detail-resource"
+				],
+				"operationId": "createItnsVillageHousesDetail",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/campaigns": {
+			"get": {
+				"tags": [
+					"campaign-resource"
+				],
+				"operationId": "getAllCampaigns",
+				"parameters": [
+					{
+						"name": "eagerload",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Campaign"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"campaign-resource"
+				],
+				"operationId": "createCampaign",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Campaign"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Campaign"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/campaign-types": {
+			"get": {
+				"tags": [
+					"campaign-type-resource"
+				],
+				"operationId": "getAllCampaignTypes",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/CampaignType"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"campaign-type-resource"
+				],
+				"operationId": "createCampaignType",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CampaignType"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/CampaignType"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/authorities": {
+			"get": {
+				"tags": [
+					"authority-resource"
+				],
+				"operationId": "getAllAuthorities",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Authority"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"authority-resource"
+				],
+				"operationId": "createAuthority",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Authority"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Authority"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/authenticate": {
+			"get": {
+				"tags": [
+					"authenticate-controller"
+				],
+				"operationId": "isAuthenticated",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"authenticate-controller"
+				],
+				"operationId": "authorize",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/LoginVM"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/JWTToken"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/account": {
+			"get": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "getAccount",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/AdminUserDTO"
+								}
+							}
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "saveAccount",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AdminUserDTO"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/api/account/reset-password/init": {
+			"post": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "requestPasswordReset",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/api/account/reset-password/finish": {
+			"post": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "finishPasswordReset",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/KeyAndPasswordVM"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/api/account/change-password": {
+			"post": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "changePassword",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/PasswordChangeDTO"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/api/users": {
+			"get": {
+				"tags": [
+					"public-user-resource"
+				],
+				"operationId": "getAllPublicUsers",
+				"parameters": [
+					{
+						"name": "page",
+						"in": "query",
+						"description": "Zero-based page index (0..N)",
+						"required": false,
+						"schema": {
+							"minimum": 0,
+							"type": "integer",
+							"default": 0
+						}
+					},
+					{
+						"name": "size",
+						"in": "query",
+						"description": "The size of the page to be returned",
+						"required": false,
+						"schema": {
+							"minimum": 1,
+							"type": "integer",
+							"default": 20
+						}
+					},
+					{
+						"name": "sort",
+						"in": "query",
+						"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/UserDTO"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/authorities/{id}": {
+			"get": {
+				"tags": [
+					"authority-resource"
+				],
+				"operationId": "getAuthority",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Authority"
+								}
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"authority-resource"
+				],
+				"operationId": "deleteAuthority",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/api/audits/entity/changes": {
+			"get": {
+				"tags": [
+					"entity-audit-resource"
+				],
+				"operationId": "getChanges",
+				"parameters": [
+					{
+						"name": "entityType",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "limit",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/EntityAuditEvent"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/audits/entity/changes/version/previous": {
+			"get": {
+				"tags": [
+					"entity-audit-resource"
+				],
+				"operationId": "getPrevVersion",
+				"parameters": [
+					{
+						"name": "qualifiedName",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "entityId",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "commitVersion",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "integer",
+							"format": "int32"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/EntityAuditEvent"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/audits/entity/all": {
+			"get": {
+				"tags": [
+					"entity-audit-resource"
+				],
+				"operationId": "getAuditedEntities",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/activate": {
+			"get": {
+				"tags": [
+					"account-resource"
+				],
+				"operationId": "activateAccount",
+				"parameters": [
+					{
+						"name": "key",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Campaign": {
+				"required": [
+					"campaignCode",
+					"campaignStartedDate",
+					"enabled"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"campaignCode": {
+						"type": "string"
+					},
+					"campaignStartedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"campaignDays": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"campaignYear": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"campaignNote": {
+						"type": "string"
+					},
+					"enabled": {
+						"type": "boolean"
+					}
+				}
+			},
+			"Warehouse": {
+				"required": [
+					"whNo"
+				],
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"whName": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"gpsCoordinate": {
+						"type": "string"
+					},
+					"supervisorName": {
+						"type": "string"
+					},
+					"whNo": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"supervisorMobile": {
+						"type": "string"
+					},
+					"campaign": {
+						"$ref": "#/components/schemas/Campaign"
+					}
+				}
+			},
+			"Team": {
+				"required": [
+					"teamNo"
+				],
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"teamLeader": {
+						"type": "string"
+					},
+					"teamNo": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"teamNote": {
+						"type": "string"
+					},
+					"teamMobile": {
+						"type": "string"
+					},
+					"teamNoOfTeamWorkers": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"mobility": {
+						"type": "string"
+					}
+				}
+			},
+			"WarehouseItem": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"itemName": {
+						"type": "string"
+					},
+					"itemDescription": {
+						"type": "string"
+					}
+				}
+			},
+			"WarehouseTransaction": {
+				"required": [
+					"entryType",
+					"quantity",
+					"transactionDate",
+					"warehouse"
+				],
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"imovUid": {
+						"type": "string"
+					},
+					"transactionDate": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"phaseNo": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"entryType": {
+						"type": "string"
+					},
+					"quantity": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"notes": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"personName": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"workDayId": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"submissionTime": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"submissionId": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"deleted": {
+						"type": "boolean"
+					},
+					"submissionUuid": {
+						"type": "string"
+					},
+					"item": {
+						"$ref": "#/components/schemas/WarehouseItem"
+					},
+					"sourceWarehouse": {
+						"$ref": "#/components/schemas/Warehouse"
+					},
+					"team": {
+						"$ref": "#/components/schemas/Team"
+					},
+					"warehouse": {
+						"$ref": "#/components/schemas/Warehouse"
+					},
+					"campaign": {
+						"$ref": "#/components/schemas/Campaign"
+					}
+				}
+			},
+			"ReviewTeam": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"progressOrname": {
+						"type": "string"
+					},
+					"progressOrUser": {
+						"type": "string"
+					}
+				}
+			},
+			"User": {
+				"required": [
+					"activated",
+					"login"
+				],
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"login": {
+						"maxLength": 50,
+						"minLength": 1,
+						"pattern": "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+						"type": "string"
+					},
+					"firstName": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					},
+					"lastName": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					},
+					"email": {
+						"maxLength": 254,
+						"minLength": 5,
+						"type": "string"
+					},
+					"activated": {
+						"type": "boolean"
+					},
+					"langKey": {
+						"maxLength": 10,
+						"minLength": 2,
+						"type": "string"
+					},
+					"imageUrl": {
+						"maxLength": 256,
+						"minLength": 0,
+						"type": "string"
+					},
+					"resetDate": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			},
+			"MVillagesLocations": {
+				"required": [
+					"districtCode",
+					"ppcCode",
+					"ppcCodeGis"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"ppcCode": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"mappingStatus": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"districtCode": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"villageUid": {
+						"type": "string"
+					},
+					"subdistrictName": {
+						"type": "string"
+					},
+					"villageName": {
+						"type": "string"
+					},
+					"subvillageName": {
+						"type": "string"
+					},
+					"ppdName": {
+						"type": "string"
+					},
+					"urbanRuralId": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"urbanRural": {
+						"type": "string"
+					},
+					"settlement": {
+						"type": "string"
+					},
+					"pop2004": {
+						"type": "number",
+						"format": "double"
+					},
+					"pop2022": {
+						"type": "number",
+						"format": "double"
+					},
+					"longitude": {
+						"type": "number",
+						"format": "double"
+					},
+					"latitude": {
+						"type": "number",
+						"format": "double"
+					},
+					"ppcCodeGis": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"level": {
+						"type": "string",
+						"enum": [
+							"DISTRICT",
+							"SUBDISTRICT",
+							"SUBVILLAGE"
+						]
+					},
+					"tlement": {
+						"$ref": "#/components/schemas/MVillagesLocations"
+					}
+				}
+			},
+			"TeamAssignment": {
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"phaseNo": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"fieldCode": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"districtCode": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"gov": {
+						"type": "string"
+					},
+					"district": {
+						"type": "string"
+					},
+					"subdistrict": {
+						"type": "string"
+					},
+					"village": {
+						"type": "string"
+					},
+					"subvillage": {
+						"type": "string"
+					},
+					"ppdName": {
+						"type": "string"
+					},
+					"dayId": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"population": {
+						"type": "number",
+						"format": "double"
+					},
+					"itnsPlanned": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"targetType": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"longitude": {
+						"type": "number",
+						"format": "double"
+					},
+					"latitude": {
+						"type": "number",
+						"format": "double"
+					},
+					"startDayDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"campaign": {
+						"$ref": "#/components/schemas/Campaign"
+					},
+					"location": {
+						"$ref": "#/components/schemas/MVillagesLocations"
+					},
+					"team": {
+						"$ref": "#/components/schemas/Team"
+					},
+					"warehouse": {
+						"$ref": "#/components/schemas/Warehouse"
+					}
+				}
+			},
+			"ProgressStatus": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"progressStatusLabel": {
+						"type": "string"
+					}
+				}
+			},
+			"ItnsVillage": {
+				"required": [
+					"assignment",
+					"submissionId",
+					"submissionUuid",
+					"team"
+				],
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"submissionUuid": {
+						"type": "string"
+					},
+					"submissionId": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"deleted": {
+						"type": "boolean"
+					},
+					"workDayDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"surveytype": {
+						"type": "string",
+						"enum": [
+							"ACTUALREPORT",
+							"TESTREPORT"
+						]
+					},
+					"otherReasonComment": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"reasonNotcomplete": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"settlement": {
+						"type": "string",
+						"enum": [
+							"RESIDENTS",
+							"IDPSCAMP"
+						]
+					},
+					"settlementName": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"tlCommenet": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"timeSpentHours": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"timeSpentMinutes": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"difficulties": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"locationCaptured": {
+						"type": "string"
+					},
+					"locationCaptureTime": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"hoProof": {
+						"type": "string"
+					},
+					"startEntryTime": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"endEntryTime": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"finishedEntryTime": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"hoProofUrl": {
+						"type": "string"
+					},
+					"submissionTime": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"untargetingOtherSpecify": {
+						"type": "string"
+					},
+					"otherVillageName": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"otherVillageCode": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					},
+					"otherTeamNo": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"progressStatus": {
+						"$ref": "#/components/schemas/ProgressStatus"
+					},
+					"team": {
+						"$ref": "#/components/schemas/Team"
+					},
+					"assignment": {
+						"$ref": "#/components/schemas/TeamAssignment"
+					},
+					"campaign": {
+						"$ref": "#/components/schemas/Campaign"
+					},
+					"houseDetails": {
+						"uniqueItems": true,
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ItnsVillageHousesDetail"
+						}
+					},
+					"tlement": {
+						"$ref": "#/components/schemas/ItnsVillage"
+					},
+					"tlementName": {
+						"$ref": "#/components/schemas/ItnsVillage"
+					}
+				}
+			},
+			"ItnsVillageHousesDetail": {
+				"required": [
+					"houseUuid"
+				],
+				"type": "object",
+				"properties": {
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"submissionUuid": {
+						"type": "string"
+					},
+					"deleted": {
+						"type": "boolean"
+					},
+					"houseUuid": {
+						"type": "string"
+					},
+					"couponid": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"hname": {
+						"type": "string"
+					},
+					"male": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"female": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"pregnant": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"population": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"maleChild": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"femaleChild": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"displaced": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"itns": {
+						"minimum": 0,
+						"type": "integer",
+						"format": "int32"
+					},
+					"comment": {
+						"maxLength": 2000,
+						"minLength": 0,
+						"type": "string"
+					}
+				}
+			},
+			"CampaignType": {
+				"required": [
+					"campaignType"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"campaignType": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					}
+				}
+			},
+			"AdminUserDTO": {
+				"required": [
+					"login"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"login": {
+						"maxLength": 50,
+						"minLength": 1,
+						"pattern": "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+						"type": "string"
+					},
+					"firstName": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					},
+					"lastName": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					},
+					"email": {
+						"maxLength": 254,
+						"minLength": 5,
+						"type": "string"
+					},
+					"imageUrl": {
+						"maxLength": 256,
+						"minLength": 0,
+						"type": "string"
+					},
+					"activated": {
+						"type": "boolean"
+					},
+					"langKey": {
+						"maxLength": 10,
+						"minLength": 2,
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"authorities": {
+						"uniqueItems": true,
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				}
+			},
+			"ManagedUserVM": {
+				"required": [
+					"login"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"login": {
+						"maxLength": 50,
+						"minLength": 1,
+						"pattern": "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+						"type": "string"
+					},
+					"firstName": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					},
+					"lastName": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					},
+					"email": {
+						"maxLength": 254,
+						"minLength": 5,
+						"type": "string"
+					},
+					"imageUrl": {
+						"maxLength": 256,
+						"minLength": 0,
+						"type": "string"
+					},
+					"activated": {
+						"type": "boolean"
+					},
+					"langKey": {
+						"maxLength": 10,
+						"minLength": 2,
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"lastModifiedBy": {
+						"type": "string"
+					},
+					"lastModifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"authorities": {
+						"uniqueItems": true,
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"password": {
+						"maxLength": 100,
+						"minLength": 4,
+						"type": "string"
+					}
+				}
+			},
+			"Authority": {
+				"required": [
+					"name"
+				],
+				"type": "object",
+				"properties": {
+					"name": {
+						"maxLength": 50,
+						"minLength": 0,
+						"type": "string"
+					}
+				}
+			},
+			"LoginVM": {
+				"required": [
+					"password",
+					"username"
+				],
+				"type": "object",
+				"properties": {
+					"username": {
+						"maxLength": 50,
+						"minLength": 1,
+						"type": "string"
+					},
+					"password": {
+						"maxLength": 100,
+						"minLength": 4,
+						"type": "string"
+					},
+					"rememberMe": {
+						"type": "boolean"
+					}
+				}
+			},
+			"JWTToken": {
+				"type": "object",
+				"properties": {
+					"id_token": {
+						"type": "string"
+					}
+				}
+			},
+			"KeyAndPasswordVM": {
+				"type": "object",
+				"properties": {
+					"key": {
+						"type": "string"
+					},
+					"newPassword": {
+						"type": "string"
+					}
+				}
+			},
+			"PasswordChangeDTO": {
+				"type": "object",
+				"properties": {
+					"currentPassword": {
+						"type": "string"
+					},
+					"newPassword": {
+						"type": "string"
+					}
+				}
+			},
+			"UserDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"login": {
+						"type": "string"
+					}
+				}
+			},
+			"EntityAuditEvent": {
+				"required": [
+					"action",
+					"entityId",
+					"entityType",
+					"modifiedDate"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer",
+						"format": "int64"
+					},
+					"entityId": {
+						"type": "string"
+					},
+					"entityType": {
+						"maxLength": 255,
+						"minLength": 0,
+						"type": "string"
+					},
+					"action": {
+						"maxLength": 20,
+						"minLength": 0,
+						"type": "string"
+					},
+					"entityValue": {
+						"type": "string"
+					},
+					"commitVersion": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"modifiedBy": {
+						"maxLength": 100,
+						"minLength": 0,
+						"type": "string"
+					},
+					"modifiedDate": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			}
+		}
+	}
+}
