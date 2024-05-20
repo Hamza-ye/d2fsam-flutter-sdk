@@ -1,28 +1,45 @@
+/// Represents a data element in DHIS2.
+///
+/// Data elements are the atomic units of data in DHIS2. They represent the
+/// smallest piece of data that can be collected or reported on. Each data
+/// element has a unique identifier and is associated with a data set.
+///
+/// This class provides methods to interact with data elements in DHIS2, such
+/// as retrieving information about a specific data element or updating its
+/// properties.
+///
 import 'package:d2_remote/core/annotations/index.dart';
 import 'package:d2_remote/shared/entities/identifiable.entity.dart';
 
 @AnnotationReflectable
 @Entity(tableName: 'dataelement', apiResourceName: 'dataElements')
 class DataElement extends IdentifiableEntity {
+  /// The name of the form where this data element is collected.
+  /// This property is optional.
+  ///
   @Column(type: ColumnType.TEXT, nullable: true)
   String? formName;
 
+  /// The type of value that this data element represents.
+  /// Examples TEXT, LONG_TEXT, LETTER, PHONE_NUMBER, EMAIL, BOOLEAN, TRUE_ONLY, DATE, DATETIME, TIME, NUMBER, UNIT_INTERVAL, PERCENTAGE, INTEGER, INTEGER_POSITIVE, INTEGER_NEGATIVE, INTEGER_ZERO_OR_POSITIVE, TRACKER_ASSOCIATE, USERNAME, COORDINATE, ORGANISATION_UNIT, REFERENCE, AGE, URL, FILE_RESOURCE, IMAGE, GEOJSON
   @Column(type: ColumnType.TEXT, length: 50)
   String valueType;
 
+  /// The type of aggregation that is used for this data element.
   @Column(type: ColumnType.TEXT, length: 50)
   String aggregationType;
 
+  /// A description of the data element.
   @Column(type: ColumnType.TEXT, nullable: true)
   String? description;
 
+  /// The option set that is associated with this data element.
   // NMC
   @Column(type: ColumnType.TEXT, nullable: true, length: 11)
   String? optionSet;
 
   @Column(type: ColumnType.TEXT, nullable: true)
   String? fieldMask;
-  //
 
   DataElement(
       {required String id,
@@ -50,6 +67,12 @@ class DataElement extends IdentifiableEntity {
             dirty: dirty);
 
   factory DataElement.fromJson(Map<String, dynamic> json) {
+    final optionSet = json['optionSet'] != null
+        ? json['optionSet'] is String
+            ? json['optionSet']
+            : json['optionSet']['id'] ?? json['optionSet']
+        : null;
+
     return DataElement(
         id: json['id'],
         name: json['name'],
@@ -61,7 +84,7 @@ class DataElement extends IdentifiableEntity {
         aggregationType: json['aggregationType'],
         description: json['description'],
         formName: json['formName'],
-        optionSet: json['optionSet']?['id'],
+        optionSet: optionSet,
         fieldMask: json['fieldMask'],
         dirty: json['dirty']);
   }

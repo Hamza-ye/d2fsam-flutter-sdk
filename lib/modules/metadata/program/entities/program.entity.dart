@@ -1,3 +1,10 @@
+/// [Program] is a class that extends `IdentifiableEntity`.
+/// It represents a program in the DHIS2 system.
+///
+/// A "Program" is a flexible, general-purpose system for the collection, validation, analysis, and presentation of aggregated and patient-based data.
+/// Programs in DHIS2 are used to model anything from disease surveillance to patient tracking. They are often used in health applications for managing patients and their health data across visits and over time.
+/// A program can be of different types such as 'WITHOUT_REGISTRATION' for anonymous events, 'WITH_REGISTRATION' for tracker programs, and 'WITH_REGISTRATION_AND_EVENTS' for tracker programs with stages.
+///
 import 'package:d2_remote/core/annotations/index.dart';
 import 'package:d2_remote/modules/metadata/program/entities/program_rule_variable.entity.dart';
 import 'package:d2_remote/modules/metadata/program/entities/program_section.entity.dart';
